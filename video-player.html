@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Player | AI Avatar Movie</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="project.css">
+    <style>
+        .video-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            padding-top: 56.25%; /* 16:9 Aspect Ratio */
+            overflow: hidden;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            background: #000;
+        }
+
+        .player-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .player-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .back-nav {
+            margin-bottom: 40px;
+        }
+
+        .back-link {
+            color: var(--text-sec);
+            font-weight: 500;
+            transition: color 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .back-link:hover {
+            color: var(--accent-1);
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar scrolled">
+        <div class="logo"><a href="index.html">WD.</a></div>
+        <div class="nav-links">
+            <a href="index.html#about">About</a>
+            <a href="index.html#works">Works</a>
+            <a href="index.html#contact">Contact</a>
+        </div>
+    </nav>
+
+    <main class="section-padding" style="padding-top: 150px;">
+        <div class="back-nav fade-in">
+            <a href="project-1.html" class="back-link">← Back to Project Details</a>
+        </div>
+
+        <div class="player-header fade-in">
+            <h1>AI Avatar Movie Player</h1>
+            <p>AIアバターの動画生成デモンストレーション</p>
+        </div>
+
+        <div class="video-container glass fade-in">
+            <video controls autoplay muted playsinline>
+                <source src="images/ai-avator.MP4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <div class="project-nav fade-in" style="margin-top: 60px; text-align: center; border-top: none;">
+            <a href="project-1.html" class="btn primary-btn">Project Page</a>
+            <a href="index.html#works" class="btn">Back to Portfolio</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2026 Web Designer Portfolio. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Intersection Observer for fade-in elements
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('appear');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
+</body>
+
+</html>

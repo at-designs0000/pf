@@ -1,0 +1,125 @@
+/* ====================================================
+   Project Detail Pages Enhancements
+   ==================================================== */
+
+.navbar.scrolled .logo a {
+    color: var(--text-primary);
+}
+
+.project-hero {
+    padding-top: 150px;
+    padding-bottom: 50px;
+    text-align: center;
+    background: radial-gradient(circle at 50% 0%, rgba(139, 92, 246, 0.15), transparent 70%);
+}
+
+.project-hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+    font-family: var(--font-heading);
+    letter-spacing: -0.5px;
+}
+
+.project-hero p {
+    font-size: 1.2rem;
+    color: var(--text-sec);
+}
+
+.project-main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding-top: 0;
+}
+
+.project-cover {
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.project-cover img {
+    width: 100%;
+    border-radius: 20px;
+    display: block;
+}
+
+.project-meta {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    padding: 30px;
+    margin-bottom: 60px;
+    border-radius: 20px;
+}
+
+.meta-item h3 {
+    font-size: 0.9rem;
+    color: var(--accent-1);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.meta-item p {
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.project-url-link {
+    color: var(--accent-1);
+    font-weight: 600;
+    text-decoration: none;
+    position: relative;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.project-url-link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: -2px;
+    left: 0;
+    background: linear-gradient(90deg, var(--accent-1), var(--accent-2));
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s ease;
+}
+
+.project-url-link:hover {
+    color: var(--text-primary);
+    transform: translateX(5px);
+}
+
+.project-url-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.project-description h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-family: var(--font-heading);
+}
+
+.project-description p {
+    color: var(--text-sec);
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.project-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 80px;
+    border-top: 1px solid var(--glass-border);
+    padding-top: 50px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .project-hero h1 { font-size: 2.5rem; }
+    .project-hero { padding-top: 120px; padding-bottom: 30px; }
+    .project-nav { flex-direction: column; text-align: center; }
+}
