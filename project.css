@@ -516,4 +516,25 @@
 }
 
 
+/* ====================================================
+   UIUX Improvements Section
+   ==================================================== */
+.uiux-section {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+.uiux-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+    color: var(--text-primary);
+    border-left: 3px solid var(--accent-1);
+    padding-left: 10px;
+}
+.uiux-card img {
+    width: 100%;
+    border-radius: 15px;
+    display: block;
+}
 
